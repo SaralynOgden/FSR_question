@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+  // This function recursively goes down the JSON DOM representation and adds
+  // the new element to a html string.
   function traverseTheDOM(portion, level) {
     if (typeof portion.content === 'string') {
       return `${'\t'.repeat(level)}<${portion.tag}>${portion.content}</${portion.tag}>`;
